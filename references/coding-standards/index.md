@@ -1,0 +1,57 @@
+# 代码规范索引
+
+按层组合规范：
+
+```text
+base.md
+  + languages/<language>.md
+  + comments/{chinese-comments,language-formats}.md
+  + frameworks/<framework>.md
+  + project-template.md 对应的仓库覆盖规则
+```
+
+只加载当前变更路径适用的文件。修改源码时必须加载 [注释规范](comments/index.md)。Google Style Guides 是默认语言来源；注释层补充跨语言语义和中文写作要求，不替代语言工具的格式规则。
+
+## 优先级
+
+```text
+安全与合规 > 项目覆盖 > 框架/语言格式 > 注释语义 > 通用基线 > 用户偏好
+```
+
+项目覆盖必须声明作用域、原因、所有者和复核日期。用户偏好永远不是规范覆盖；仓库已有源码注释语言高于个人沟通语言偏好。
+
+## 路由方法
+
+1. 使用 [language-map.yaml](language-map.yaml) 根据路径识别语言。
+2. `.h` 无法单独判断 C 或 C++，先读取 [c-or-cpp-header.md](languages/c-or-cpp-header.md)。
+3. 加载一个或少数几个实际相关的语言文件，不批量加载整个目录。
+4. 从依赖清单和现有源码确认框架，再按需加载 [框架索引](frameworks/index.md)。
+5. 仓库有项目覆盖规则时最后叠加；发现冲突按上方优先级处理并记录原因。
+
+## 语言覆盖
+
+| 本地规则 | Google/官方上游 | 状态 |
+|---|---|---|
+| `cpp.md` | C++ | 可用 |
+| `csharp.md` | C# | 可用 |
+| `dart.md` | Effective Dart | Google 索引委托来源 |
+| `go.md` | Go | 可用 |
+| `html-css.md` | HTML/CSS | 可用 |
+| `java.md` | Java | 可用 |
+| `javascript.md` | JavaScript | 可用 |
+| `json.md` | JSON | 可用 |
+| `lisp.md` | Lisp | 可用，需先确认方言 |
+| `markdown.md` | Markdown 文档 | 可用 |
+| `objective-c.md` | Objective-C | 可用 |
+| `python.md` | Python | 可用 |
+| `r.md` | R | 可用 |
+| `rust.md` | Rust | 可用 |
+| `shell.md` | Shell | 可用 |
+| `typescript.md` | TypeScript | 可用 |
+| `vimscript.md` | Vimscript | 可用 |
+| `xml.md` | XML | 可用 |
+| `swift.md` | Google Swift Guide | 独立 Google 仓库 |
+| `kotlin.md` | Android Kotlin Style Guide | 独立 Android 来源 |
+| `c.md` | 无专门 Google C Guide | 必须由项目规则补充 |
+
+固定上游版本、官方 URL 和许可说明见 [来源](sources.md)。

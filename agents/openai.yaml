@@ -1,0 +1,6 @@
+interface:
+  display_name: "Coding with Memory"
+  short_description: "Coding standards, quality gates, and controlled memory"
+  default_prompt: "Use $coding-with-memory to plan, implement, verify, and record a project change."
+policy:
+  allow_implicit_invocation: true

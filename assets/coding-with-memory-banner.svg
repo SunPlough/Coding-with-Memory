@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1520" height="420" viewBox="0 0 1520 420" role="img" aria-labelledby="title desc">
+  <title id="title">Coding with Memory</title>
+  <desc id="desc">A restrained engineering workflow graphic showing a code graph and an auditable memory ledger.</desc>
+  <rect width="1520" height="420" rx="18" fill="#0b1220"/>
+  <path d="M0 350H1520" stroke="#1e293b" stroke-width="2"/>
+  <path d="M0 70H1520" stroke="#1e293b" stroke-width="2"/>
+  <g fill="none" stroke="#5eead4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M125 210h145l85-92h150l92 92h150"/>
+    <path d="M270 210l85 92h150l92-92" opacity=".72"/>
+  </g>
+  <g fill="#0b1220" stroke="#5eead4" stroke-width="5">
+    <circle cx="125" cy="210" r="17"/>
+    <circle cx="270" cy="210" r="17"/>
+    <circle cx="355" cy="118" r="17"/>
+    <circle cx="505" cy="118" r="17"/>
+    <circle cx="597" cy="210" r="17"/>
+    <circle cx="655" cy="210" r="17"/>
+    <circle cx="505" cy="302" r="17"/>
+    <circle cx="355" cy="302" r="17"/>
+  </g>
+  <g transform="translate(910 80)">
+    <rect x="0" y="0" width="430" height="260" rx="12" fill="#111c2e" stroke="#334155" stroke-width="3"/>
+    <path d="M28 55h374M28 105h374M28 155h374M28 205h374" stroke="#334155" stroke-width="2"/>
+    <g fill="#fbbf24">
+      <circle cx="52" cy="30" r="7"/>
+      <circle cx="52" cy="80" r="7"/>
+      <circle cx="52" cy="130" r="7"/>
+      <circle cx="52" cy="180" r="7"/>
+    </g>
+    <g fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="18">
+      <text x="78" y="36">trigger: delivery_report</text>
+      <text x="78" y="86">action: show_evidence_first</text>
+      <text x="78" y="136">domain: communication</text>
+      <text x="78" y="186">status: approved</text>
+    </g>
+    <path d="M310 220h86" stroke="#5eead4" stroke-width="5" stroke-linecap="round"/>
+    <path d="M396 220l-17-12v24z" fill="#5eead4"/>
+  </g>
+  <g fill="#f8fafc" font-family="Inter, Segoe UI, sans-serif">
+    <text x="112" y="105" font-size="46" font-weight="700" letter-spacing="2">CODING WITH MEMORY</text>
+    <text x="112" y="155" font-size="22" fill="#94a3b8">standards · evidence · bounded memory</text>
+  </g>
+  <g fill="#fbbf24" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="16">
+    <text x="112" y="372">SAFE PRIORITIES</text>
+    <text x="330" y="372" fill="#5eead4">→</text>
+    <text x="365" y="372">PROJECT FACTS</text>
+    <text x="600" y="372" fill="#5eead4">→</text>
+    <text x="635" y="372">AUDITABLE MEMORY</text>
+  </g>
+</svg>

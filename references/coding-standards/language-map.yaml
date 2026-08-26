@@ -1,0 +1,91 @@
+version: 1
+default_language: unknown
+rules:
+  - pattern: "**/*.c"
+    language: c
+  - pattern: "**/*.cc"
+    language: cpp
+  - pattern: "**/*.cpp"
+    language: cpp
+  - pattern: "**/*.cxx"
+    language: cpp
+  - pattern: "**/*.h"
+    language: c-or-cpp-header
+  - pattern: "**/*.hpp"
+    language: cpp
+  - pattern: "**/*.cs"
+    language: csharp
+  - pattern: "**/*.dart"
+    language: dart
+  - pattern: "**/*.go"
+    language: go
+  - pattern: "**/*.html"
+    language: html-css
+  - pattern: "**/*.htm"
+    language: html-css
+  - pattern: "**/*.css"
+    language: html-css
+  - pattern: "**/*.scss"
+    language: html-css
+  - pattern: "**/*.java"
+    language: java
+  - pattern: "**/*.js"
+    language: javascript
+  - pattern: "**/*.jsx"
+    language: javascript
+  - pattern: "**/*.json"
+    language: json
+  - pattern: "**/*.jsonc"
+    language: json
+  - pattern: "**/*.lisp"
+    language: lisp
+  - pattern: "**/*.lsp"
+    language: lisp
+  - pattern: "**/*.cl"
+    language: lisp
+  - pattern: "**/*.el"
+    language: lisp
+  - pattern: "**/*.md"
+    language: markdown
+  - pattern: "**/*.m"
+    language: objective-c
+  - pattern: "**/*.mm"
+    language: objective-c
+  - pattern: "**/*.py"
+    language: python
+  - pattern: "**/*.r"
+    language: r
+  - pattern: "**/*.R"
+    language: r
+  - pattern: "**/*.sh"
+    language: shell
+  - pattern: "**/*.bash"
+    language: shell
+  - pattern: "**/*.bats"
+    language: shell
+  - pattern: "**/*.ts"
+    language: typescript
+  - pattern: "**/*.tsx"
+    language: typescript
+  - pattern: "**/*.kt"
+    language: kotlin
+  - pattern: "**/*.kts"
+    language: kotlin
+  - pattern: "**/*.rs"
+    language: rust
+  - pattern: "**/*.swift"
+    language: swift
+  - pattern: "**/*.vim"
+    language: vimscript
+  - pattern: "**/*.xml"
+    language: xml
+
+framework_detection:
+  - marker: "package.json"
+    inspect: "dependencies and scripts"
+  - marker: "pyproject.toml"
+    inspect: "project dependencies"
+  - marker: "pom.xml"
+    inspect: "Java framework dependencies"
+  - marker: "build.gradle"
+    inspect: "Java/Kotlin plugins and dependencies"

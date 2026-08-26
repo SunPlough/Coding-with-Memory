@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "checks": [
+    {
+      "name": "Unit tests",
+      "command": ["python", "-m", "unittest", "discover", "-s", "tests"],
+      "cwd": ".",
+      "timeout_seconds": 300,
+      "required": true,
+      "enabled": true
+    }
+  ]
+}
