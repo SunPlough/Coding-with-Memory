@@ -6,7 +6,7 @@
   <img src="assets/coding-with-memory-banner.svg" alt="Coding with Memory" width="760" />
 </p>
 
-> 让 Agent 写得更清楚，让项目记得更克制。
+> 让 Agent 写得更清楚，让我们的Memory有迹可循...
 
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-compatible-2f855a.svg)](https://agentskills.io)
 [![Codex](https://img.shields.io/badge/Codex-ready-2563eb.svg)](https://openai.com/codex/)
