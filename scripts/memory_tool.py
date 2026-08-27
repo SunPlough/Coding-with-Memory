@@ -207,7 +207,9 @@ def add_entry(repo: Path, args: argparse.Namespace) -> dict[str, Any]:
         raise ValueError("preference 必须声明至少一个允许影响的 effect。")
     if args.category != "preference" and args.effect:
         raise ValueError("effect 只适用于 preference。")
-    key = fingerprint(args.category, args.scope, summary)
+    # 指纹基于脱敏前的原始文本，避免两个仅在密钥/邮箱上不同的 Memory
+    # 被误判为重复而丢失；存储与展示仍使用脱敏后的内容。
+    key = fingerprint(args.category, args.scope, args.summary.strip())
     supersedes: str | None = None
     for existing in current_entries(root):
         if existing.get("fingerprint") != key:
