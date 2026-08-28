@@ -53,42 +53,11 @@ def safe_cwd(repo: Path, value: str) -> str:
     return relative.as_posix() or "."
 
 
-def split_short_flags(arg: str) -> set[str]:
-    # 将 "-lc" 这类组合短选项拆成 "-l" 与 "-c"，避免精确白名单漏判。
-    lowered = arg.lower()
-    if re.fullmatch(r"-[a-z][a-z]+", lowered):
-        return {f"-{char}" for char in lowered[1:]}
-    return {lowered}
-
-
-def module_after_m(arg: str) -> str | None:
-    # 解析 `-m` 与其后的模块名，兼容 `-m pip` 与 `-mpip` 两种写法。
-    lowered = arg.lower()
-    if lowered == "-m" or re.fullmatch(r"-m[a-z_][a-z0-9_.-]*", lowered):
-        module = lowered[2:]
-        return module or "-m"
-    return None
-
-
 def has_shell_string(command: list[str]) -> bool:
-    # 组合短选项（例如 bash -lc、sh -ic）等价于 -c，不能用精确白名单遗漏。
     executable = Path(command[0]).name.lower() if command else ""
     flags = {item.lower() for item in command[1:]}
     shells = {"sh", "bash", "zsh", "cmd", "cmd.exe", "powershell", "pwsh"}
-    if executable not in shells:
-        return False
-    for flag in flags:
-        expanded = split_short_flags(flag)
-        if executable in {"cmd", "cmd.exe"} and flag.startswith("/"):
-            # cmd.exe 的 `/c`（以及 `/c` 后接参数）都表示执行后续字符串。
-            if re.fullmatch(r"/[a-z]*c[a-z]*.*", flag):
-                return True
-            continue
-        if "-c" in expanded or flag == "/c":
-            return True
-        if executable in {"powershell", "pwsh"} and flag == "-command":
-            return True
-    return False
+    return executable in shells and bool(flags & {"-c", "/c", "-command"})
 
 
 def unsafe_command(command: list[str]) -> str | None:
@@ -100,11 +69,8 @@ def unsafe_command(command: list[str]) -> str | None:
     args = {item.lower() for item in command[1:]}
     if executable in {"pip", "pip3"} and "install" in args:
         return "不得安装 Python 依赖"
-    if executable.startswith("python") and "install" in args:
-        # 兼容 `python -m pip install ...` 与 `python -mpip install ...`。
-        modules = {module_after_m(item) for item in command[1:]}
-        if "pip" in modules or "-m" in args and "pip" in args:
-            return "不得安装 Python 依赖"
+    if executable.startswith("python") and {"-m", "pip", "install"}.issubset(args):
+        return "不得安装 Python 依赖"
     if executable in {"uv", "uv.exe"} and {"pip", "install"}.issubset(args):
         return "不得安装 Python 依赖"
     if executable in {"npm", "npm.cmd", "pnpm", "pnpm.cmd", "yarn", "yarn.cmd"}:

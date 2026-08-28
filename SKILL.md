@@ -38,7 +38,7 @@ python <skill-dir>/scripts/collect_context.py --repo <repo> --format markdown
 然后按路径加载：
 
 1. [规范索引](references/coding-standards/index.md) 与 [通用工程基线](references/coding-standards/base.md)。
-2. `references/coding-standards/languages/` 中当前文件对应的语言规范。
+2. `references/coding-standards/languages/` 中当前文件对应的语言规范；逐项执行其中 MUST/MUST NOT，SHOULD 例外必须有证据。
 3. [中文注释规范](references/coding-standards/comments/index.md)，修改源码时必读。
 4. 仓库实际使用的框架规范；没有对应文件时遵循官方文档与仓库事实，不自行发明规则。
 5. [架构边界](references/architecture/boundaries.md)、[安全清单](references/security/checklist.md) 和项目覆盖规则。
