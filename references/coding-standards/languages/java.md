@@ -12,13 +12,13 @@
 - **MUST NOT** 使用 finalizer；资源使用 `try-with-resources` 或项目的生命周期工具显式管理。
 - **MAY** 使用 `final` 表达不会重新赋值的局部变量、参数和字段；是否统一添加由项目规则决定，不把个人偏好当成 Google 硬规则。
 - **SHOULD** 让类职责聚焦，公共 API 的可见性、线程安全、异常和 null 语义在 Javadoc 中可被调用者依赖。
-- **MUST** 公共类、方法、字段和复杂类型提供 Javadoc；第一句是简洁的 summary fragment，不重复名称或显然实现。
+- **MUST** 为每个 visible class、member 或 record component 提供 Javadoc；简单且显然的成员和覆盖方法可以省略。第一句使用简洁的 summary fragment，不重复名称或显然实现。
 - **SHOULD** 优先使用不可变值对象和窄接口；避免为未来扩展预留空泛的基类、工厂或兼容层。
 
 ## 验证
 
 ```bash
-google-java-format --dry-run <changed-java-files>
+google-java-format --dry-run --set-exit-if-changed <changed-java-files>
 ./gradlew check                 # Gradle 项目
 mvn -DskipTests=false verify   # Maven 项目
 ```

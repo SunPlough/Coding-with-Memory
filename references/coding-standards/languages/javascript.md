@@ -22,8 +22,8 @@ Google 已停止更新 JavaScript Guide，并建议迁移到 TypeScript；维护
 ## 验证
 
 ```bash
-npx google-closure-compiler --formatting=PRETTY_PRINT <changed-files>  # 若项目使用 Closure
-npx eslint <changed-files>
+npx --no-install google-closure-compiler --formatting=PRETTY_PRINT <changed-files>  # 若项目使用 Closure
+npx --no-install eslint <changed-files>
 npm test
 ```
 

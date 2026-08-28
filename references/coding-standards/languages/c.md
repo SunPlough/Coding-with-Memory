@@ -18,5 +18,5 @@
 
 ```bash
 clang-format --dry-run --Werror <changed-c-files-and-headers>
-cc -std=<project-standard> -Wall -Wextra -Werror -c <changed-files>
+cc -std=<project-standard> -Wall -Wextra -Werror -fsyntax-only <changed-files>
 ```

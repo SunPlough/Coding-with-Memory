@@ -20,8 +20,8 @@
 ## 验证
 
 ```bash
-npx prettier --check <changed-files>  # 若仓库使用 Prettier
-npx eslint <changed-files>
-npx tsc --noEmit
+npx --no-install prettier --check <changed-files>  # 若仓库使用 Prettier
+npx --no-install eslint <changed-files>
+npx --no-install tsc --noEmit
 npm test
 ```

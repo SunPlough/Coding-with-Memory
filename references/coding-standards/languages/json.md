@@ -18,7 +18,7 @@
 
 ```bash
 python -m json.tool <file.json>
-npx prettier --check <changed-json-files>  # 若仓库使用 Prettier
+npx --no-install prettier --check <changed-json-files>  # 若仓库使用 Prettier
 <project-schema-validator> <changed-json-files>
 ```
 

@@ -16,7 +16,7 @@ Google Style Guide 仓库基线固定为 [`1809c769de31ba388c755ad15dd057a9ba853
 | Java | https://google.github.io/styleguide/javaguide.html |
 | JavaScript | https://google.github.io/styleguide/jsguide.html |
 | JSON | https://google.github.io/styleguide/jsoncstyleguide.xml |
-| Lisp | https://google.github.io/styleguide/lispguide.xml |
+| Common Lisp | https://google.github.io/styleguide/lispguide.xml |
 | Markdown | https://google.github.io/styleguide/docguide/style.html |
 | Objective-C | https://google.github.io/styleguide/objcguide.html |
 | Python | https://google.github.io/styleguide/pyguide.html |

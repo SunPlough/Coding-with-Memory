@@ -17,8 +17,8 @@
 ## 验证
 
 ```bash
-npx prettier --check <changed-html-css-files>
-npx stylelint <changed-css-files>
-npx html-validate <changed-html-files>
+npx --no-install prettier --check <changed-html-css-files>
+npx --no-install stylelint <changed-css-files>
+npx --no-install html-validate <changed-html-files>
 npm test
 ```

@@ -43,7 +43,7 @@ base.md
 | `java.md` | Java | 可用 |
 | `javascript.md` | JavaScript | 可用 |
 | `json.md` | JSON | 可用 |
-| `lisp.md` | Lisp | 可用，需先确认方言 |
+| `lisp.md` | Common Lisp | 仅 Common Lisp 使用 Google 细则；其他方言走项目/官方规则 |
 | `markdown.md` | Markdown 文档 | 可用 |
 | `objective-c.md` | Objective-C | 可用 |
 | `python.md` | Python | 可用 |

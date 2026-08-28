@@ -14,7 +14,7 @@
 ## 验证
 
 ```bash
-styler::style_dir()
-lintr::lint_package()
+Rscript -e "styler::style_pkg(dry = 'fail')"
+Rscript -e "quit(status = length(lintr::lint_package()))"
 R CMD check <package>
 ```
