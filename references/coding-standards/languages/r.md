@@ -18,3 +18,19 @@ Rscript -e "styler::style_pkg(dry = 'fail')"
 Rscript -e "quit(status = length(lintr::lint_package()))"
 R CMD check <package>
 ```
+## 严格执行清单
+
+### 官方章节覆盖
+
+Google R 正文由 `upstream/google-styleguide/Rguide.md` 与 `Rguide.xml` 提供，必须覆盖：
+
+| 官方主题 | 审查重点 |
+|---|---|
+| Syntax | 命名、格式、函数、控制流和避免隐式状态 |
+| Naming conventions | 函数、对象、参数、文件和大小写 |
+| Namespace/Packages | `pkg::fun()`、NAMESPACE、导入粒度和包文档 |
+| Pipes | 管道可读性、右向赋值禁用和中间状态 |
+| Documentation | Roxygen2、参数、返回值、副作用和错误 |
+| Reproducibility | 随机性、全局状态、数据和版本 |
+
+`styler` 通过不证明向量化语义、缺失值处理、包导出或可复现性；这些需要测试、R CMD check 或人工证据。

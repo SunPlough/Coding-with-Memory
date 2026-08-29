@@ -10,3 +10,15 @@
 2. 查看 include 它的 `.c`/`.cc`/`.cpp` 文件以及构建系统 target。
 3. 查看头文件是否使用 `namespace`、模板、类、引用或其他 C++ 语法。
 4. 证据仍冲突时先询问，不把 C++ 所有权、异常和 RTTI 规则套到 C 项目。
+## 严格执行清单
+
+本文件是 `.h` 文件的强制路由门禁，不是 C++ 规范的替代品。判定完成前，状态只能是 `manual-review`。
+
+| 判定证据 | C | C++ |
+|---|---|---|
+| 编译器/标准 | `cc -std=c11/c17` 等 | `c++ -std=c++20` 等 |
+| 语法信号 | 预处理器、C 链接约定 | namespace、模板、类、引用、重载 |
+| 构建归属 | C target 或 C API | C++ target 或 C++ API |
+| 规范来源 | `c.md`，状态 `no-google-guide` | `cpp.md` + `upstream/google-styleguide/cppguide.html` |
+
+只有在证据一致后才能加载对应文档；不能因文件扩展名、个人习惯或历史命名直接决定语言。

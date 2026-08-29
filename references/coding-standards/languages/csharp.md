@@ -25,3 +25,15 @@ dotnet test --no-build
 ```
 
 若项目使用 StyleCop、Roslyn Analyzer 或 `.editorconfig`，这些配置高于本文件的 MAY 选择。
+## 严格执行清单
+
+### 官方章节覆盖
+
+来源正文为 `upstream/google-styleguide/csharp-style.md`，必须覆盖以下两组章节：
+
+| 官方章节 | 执行要点 |
+|---|---|
+| Formatting guidelines | 命名、文件名、成员组织、空白、括号和示例保持统一 |
+| C# coding guidelines | 常量、集合接口、生成器、属性、表达式体、struct/class、lambda、初始化器、扩展方法、ref/out、LINQ、数组/List、目录、tuple、字符串、using、namespace、默认值、迭代删除、delegate、var、attribute、参数命名 |
+
+规则等级必须按正文语气判断；本地 `MUST` 只表示仓库执行门禁或正文明确要求，不把示例偏好升级成强制规范。XML 文档、nullable、Analyzer 和异步行为必须分别给出工具或人工证据。

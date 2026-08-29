@@ -19,3 +19,21 @@ clang-format --dry-run --Werror <changed-objc-files>
 xcodebuild -scheme <scheme> build
 xcodebuild -scheme <scheme> test
 ```
+## 严格执行清单
+
+### 官方章节覆盖
+
+必须读取 `upstream/google-styleguide/objcguide.md`（XML 文件仅为发布元数据）：
+
+| 官方章节 | 必查主题 |
+|---|---|
+| Principles / Example | 可读性、可维护性和示例边界 |
+| Naming | 类、方法、属性、变量、常量、文件和缩写 |
+| Types and Declarations | 类型、声明、所有权、Nullability 和头文件 |
+| Comments | 公共契约、实现原因、TODO 和 HeaderDoc |
+| C Language Features | 指针、宏、转换、数组和错误 |
+| Cocoa and Objective-C Features | ARC、NSError、属性、协议、Category、线程和生命周期 |
+| Cocoa Patterns / Objective-C++ | Cocoa 惯例以及 C++ 互操作边界 |
+| Spacing and Formatting / Exceptions | 空白、换行和批准例外 |
+
+ARC、clang-format、Xcode 构建和 HeaderDoc 是不同证据层；任何局部 `NOLINT` 都必须说明具体规则、原因和复核日期。

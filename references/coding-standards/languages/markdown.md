@@ -19,3 +19,16 @@ prettier --check <changed-markdown-files>
 markdownlint <changed-markdown-files>
 lychee <changed-markdown-files>  # 若仓库配置链接检查
 ```
+## 严格执行清单
+
+### 官方章节覆盖
+
+必须读取 `upstream/google-styleguide/docguide/style.md` 与 `docguide/best_practices.md`：
+
+| 正文 | 必查主题 |
+|---|---|
+| style.md | 最小文档、标题和大小写、布局、TOC、行宽、尾随空白、列表、代码围栏、链接、图片、表格和避免 HTML |
+| best_practices.md | 随代码更新文档、删除死文档、避免重复、记录代码故事和最小可用文档 |
+| philosophy.md | 文档的目的和读者边界 |
+
+每个链接、代码围栏、标题层级、表格和图片 alt 都要绑定到具体文件证据；Markdown 渲染成功不能证明链接可达或内容与实现同步。

@@ -21,3 +21,12 @@ swift test
 ```
 
 平台专属构建（如 Xcode scheme）以仓库配置为准；工具不存在时标记 `not-found`。
+## 严格执行清单
+
+### 外部官方来源边界
+
+Swift 不在 `google/styleguide` 主仓库中。本文件使用独立 Google Swift Guide <https://google.github.io/swift/>，状态为 `external-source`；同时遵循 Swift 官方 API Design Guidelines 与仓库 SwiftFormat/SwiftLint 版本。不能把主仓库快照的提交号写成 Swift 规范版本。
+
+### 逐项检查域
+
+必须审查格式、命名和 API 设计、Optional/错误、值语义、协议、泛型、并发 Actor/Sendability、UI 主线程、生命周期、可用性、文档和测试。强制解包、`try!`、`fatalError` 和 lint 例外必须有边界证据，不能只凭构建成功放行。

@@ -22,3 +22,17 @@ go vet ./...
 go test ./...
 go test -race ./...  # 项目支持并发时
 ```
+## 严格执行清单
+
+### 官方章节覆盖
+
+Go 需要联合读取以下四份正文：`go/index.md`、`go/guide.md`、`go/decisions.md`、`go/best-practices.md`。
+
+| 正文 | 必查主题 |
+|---|---|
+| guide.md | 清晰、简单、简洁、可维护、一致、gofmt、MixedCaps、行长和局部一致性 |
+| decisions.md | 命名、注释、导入、错误、字面量、nil、函数、循环、复制、panic、goroutine、接口、泛型、标准库和测试失败 |
+| best-practices.md | 包大小、导入、错误结构和 `%w`、日志、初始化、文档、变量、参数、CLI、测试、全局状态和接口 |
+| index.md | 文档定义和附加来源边界 |
+
+导出标识符的 Go doc、错误包装位置、goroutine 生命周期和测试辅助函数必须在 diff 中单独举证；`gofmt` 只证明格式，不证明这些语义。

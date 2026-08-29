@@ -28,3 +28,21 @@ npm test
 ```
 
 不要假设仓库一定使用 Closure；以 `package.json` 和锁文件为事实。
+## 严格执行清单
+
+### 官方章节覆盖
+
+必须读取 `upstream/google-styleguide/jsguide.html` 与 `javascriptguide.xml`：
+
+| 官方章节 | 必查主题 |
+|---|---|
+| 1 Introduction | 术语和适用边界 |
+| 2 Source file basics | 文件名、UTF-8、特殊字符和非 ASCII |
+| 3 Source file structure | fileoverview、goog.module、ES modules、导入导出、循环依赖、Closure 互操作、test-only 和 require |
+| 4 Formatting | 括号、缩进、语句、分号、80 列、换行、空白、数组/对象/class/function/switch |
+| 5 Language features | 类型转换、对象、类、函数、控制流、异常、Promise、模块和动态代码 |
+| 6 Naming | 文件、标识符、属性、常量、私有成员和缩写 |
+| 7 JSDoc | 标签、类型、模板、可见性、弃用和导出契约 |
+| 8 Policies / 9 Appendices | 禁止项、工具、兼容和附录约定 |
+
+新模块优先 TypeScript，但遗留 JavaScript 不能用迁移意愿跳过本指南。Closure、ESLint、测试和人工语义审查分别记录状态。

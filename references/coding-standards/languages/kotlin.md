@@ -19,3 +19,12 @@
 ./gradlew assemble
 ./gradlew test
 ```
+## 严格执行清单
+
+### 外部官方来源边界
+
+Kotlin 不在 `google/styleguide` 主仓库中。本文件使用 <https://developer.android.com/kotlin/style-guide>，状态为 `external-source`，并受 Android/仓库版本约束；不得引用 Google 主仓库提交号作为 Kotlin 规范版本。
+
+### 官方主题覆盖
+
+必须逐项检查源文件组织、格式化、命名、文档注释、可见性、空值、集合、表达式、扩展函数、协程、Android 生命周期和测试。Kotlin 编译通过不能替代 KtLint/Detekt、KDoc、结构化并发和主线程证据。

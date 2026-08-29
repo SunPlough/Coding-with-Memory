@@ -17,3 +17,10 @@
 ```bash
 vim -Nu NONE -n -es -V1 -c 'set nomore' -c 'source <file.vim>' -c 'qa!'
 ```
+## 严格执行清单
+
+### 官方章节覆盖
+
+必须读取 `upstream/google-styleguide/vimscriptguide.xml` 和需要完整背景时的 `vimscriptfull.xml`，逐项审查作用域、命名、缩进、空白、正则、命令、自动命令、错误、兼容性和测试。短版用于路由，full 版用于无法由短版定位的条款。
+
+`normal!`、唯一 augroup、作用域前缀、大小写敏感正则和 `abort` 是可观察行为，不能由 Vim 解析成功替代。对用户映射、全局选项、缓冲区副作用和插件重复加载必须提供人工证据。

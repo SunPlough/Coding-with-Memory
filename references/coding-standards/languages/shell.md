@@ -18,3 +18,21 @@
 shellcheck <changed-shell-files>
 bash -n <changed-shell-files>
 ```
+## 严格执行清单
+
+### 官方章节覆盖
+
+必须读取 `upstream/google-styleguide/shellguide.md`：
+
+| 官方章节 | 必查主题 |
+|---|---|
+| Shell Files and Interpreter Invocation | shebang、解释器、文件名和 Bash 兼容 |
+| Environment | 环境变量、路径、临时目录和依赖 |
+| Comments | 文件/函数注释、Globals、Arguments、Outputs、Returns |
+| Formatting | 2 空格、80 列、换行、引用和命令布局 |
+| Features and Bugs | ShellCheck、命令替换、test、字符串、glob、eval、数组、管道和算术 |
+| Aliases / Naming Conventions | alias、函数、变量、常量、文件名、局部变量和 main |
+| Calling Commands | 返回值、内置命令和外部命令 |
+| When in Doubt | 局部一致性和例外边界 |
+
+`shellcheck`、`bash -n` 和测试分别记录；任何破坏性命令必须人工验证目标范围和失败路径。

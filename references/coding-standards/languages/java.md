@@ -24,3 +24,20 @@ mvn -DskipTests=false verify   # Maven 项目
 ```
 
 具体静态分析工具以仓库配置为准；未发现的工具标记 `not-found`。
+## 严格执行清单
+
+### 官方章节覆盖
+
+必须读取 `upstream/google-styleguide/javaguide.html` 的以下全部章节：
+
+| 官方章节 | 必查主题 |
+|---|---|
+| 1 Introduction | 术语和指南适用边界 |
+| 2 Source file basics | 文件名、UTF-8、空白、转义和非 ASCII |
+| 3 Source file structure | 许可证、package、import、顶层类、成员顺序和 module |
+| 4 Formatting | 括号、缩进、语句、100 列、换行、空白、数组、switch、注解、修饰符、数字和 text block |
+| 5 Naming | 标识符通用规则、包、类、方法、常量、字段、参数、局部变量、类型变量和 camel case |
+| 6 Programming Practices | `@Override`、异常处理、静态成员限定、禁止 finalizer |
+| 7 Javadoc | 格式、summary fragment、block tag、必需位置和例外 |
+
+Google Java Format 不会证明异常没有被吞掉、finalizer 没有出现或 Javadoc 契约完整；这些必须有静态分析或人工证据。

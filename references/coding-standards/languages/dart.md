@@ -19,3 +19,19 @@ dart format --output=none --set-exit-if-changed .
 dart analyze
 dart test
 ```
+## 严格执行清单
+
+### 外部官方来源边界
+
+Dart 不在 `google/styleguide` 主仓库中。本文件使用 <https://dart.dev/effective-dart>，状态为 `external-source`；更新时记录 Effective Dart 的版本或页面快照，不能使用 Google 主仓库提交号冒充来源。
+
+### Effective Dart 覆盖
+
+| 官方分组 | 执行要点 |
+|---|---|
+| Style | `dart format`、命名、文件布局、空白和尾逗号 |
+| Documentation | dartdoc、句子、示例和公共 API 契约 |
+| Usage | null safety、async/await、异常、资源和集合 API |
+| Design | 类型、不可变性、API 形状、命名参数和扩展边界 |
+
+项目不存在 Dart 工具时只能记 `not-found`；不要用 Flutter 构建成功替代格式、分析和 API 文档证据。

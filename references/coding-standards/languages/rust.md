@@ -19,3 +19,12 @@ cargo fmt --all -- --check
 cargo clippy --all-targets --all-features -- -D warnings
 cargo test --all-features
 ```
+## 严格执行清单
+
+### 外部官方来源边界
+
+Rust 不在 `google/styleguide` 主仓库中。本文件使用独立的 <https://google.github.io/styleguide/rust/>，状态为 `external-source`；固定提交的 Google 主仓库快照不包含 Rust 正文。仓库若采用其他 Rust 官方规范，必须在项目覆盖文件中记录来源和版本。
+
+### 逐项检查域
+
+必须分别审查 rustfmt、命名和模块、所有权/借用/生命周期、错误与 panic、trait/generic、unsafe、并发、公共 rustdoc、Clippy 和测试。编译成功不能替代 Clippy、rustdoc、unsafe 边界和线程安全证据；`unwrap`、`expect`、`unsafe` 和 lint 例外必须绑定不变量或安全证明。

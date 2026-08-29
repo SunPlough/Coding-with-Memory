@@ -25,3 +25,12 @@
 ```
 
 工具不存在时标记 `not-found`，不得把未执行的方言检查报告为通过。
+## 严格执行清单
+
+### 方言与正文边界
+
+`upstream/google-styleguide/lispguide.xml` 是 Google Common Lisp Style Guide，只适用于 Common Lisp。Clojure、Scheme、Emacs Lisp 等必须标记 `external-source` 并加载各自官方规范；文件扩展名不能代替方言判定。
+
+### 官方章节覆盖
+
+按正文逐项检查行宽和缩进、包与文件、宏和条件系统、注释分号层级、命名、函数/变量、格式化、错误处理、测试和文档。每个宏必须人工说明求值次数、副作用和为何普通函数不能表达；Formatter 通过不代表包边界和动态绑定契约通过。

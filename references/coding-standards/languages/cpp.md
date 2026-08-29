@@ -29,3 +29,27 @@ ctest --test-dir <build-dir> --output-on-failure
 ```
 
 使用 `include-what-you-use`、Clang-Tidy、Sanitizer 时以仓库配置为准。
+## 严格执行清单
+
+### 官方章节覆盖
+
+必须从 `upstream/google-styleguide/cppguide.html` 逐章检查下表；本地规则只是审查索引。
+
+| 官方章节 | 审查重点 |
+|---|---|
+| Background / C++ Version | 目标、兼容版本，不能擅自升级工具链 |
+| Header Files | 自包含、include guard、Include What You Use、前置声明、定义位置和 include 顺序 |
+| Scoping | namespace、内部链接、全局/静态变量初始化与析构 |
+| Classes | 构造器工作、隐式转换、拷贝/移动、继承、运算符、访问控制和声明顺序 |
+| Functions | 输入输出、短函数、重载、默认参数和尾置返回类型 |
+| Google-Specific Magic | cpplint 及仓库启用的 Google 工具 |
+| Other C++ Features | 所有权、异常、RTTI、cast、const、整数/浮点、宏、auto、模板、模块、协程、禁用库特性 |
+| Inclusive Language | 新增术语不使用排斥性命名 |
+| Naming | 文件、类型、概念、变量、常量、函数、命名空间、枚举和模板参数 |
+| Comments | 文件、类、函数、变量、实现、TODO、标点语法 |
+| Formatting | 80 列、空白、括号、调用、初始化、循环、预处理和垂直空白 |
+| Exceptions to the Rules | 仅记录官方例外和项目批准例外 |
+
+### 交付前硬门禁
+
+每个变更路径至少记录 `source_section`、`rule_level`、`status`、`evidence`。Formatter 不能替代所有权、异常、API 契约和线程安全审查；工具不存在时使用 `not-found`。

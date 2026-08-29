@@ -23,3 +23,18 @@ npx --no-install prettier --check <changed-json-files>  # 若仓库使用 Pretti
 ```
 
 `jsonc` 只有在消费者明确支持时使用；不要把 JSONC 注释文件当作严格 JSON API 发送。
+## 严格执行清单
+
+### 官方章节覆盖
+
+必须读取 `upstream/google-styleguide/jsoncstyleguide.xml`，并按正文的属性、类型、数组、空值、分页、错误和兼容章节审查。渲染入口 `jsoncstyleguide.html` 只用于定位，不替代 XML 正文。
+
+| 检查域 | 必须证明的内容 |
+|---|---|
+| 语法 | 严格 JSON，无注释、尾逗号、函数或表达式 |
+| 命名与结构 | 属性命名、单复数、嵌套边界、map 与普通对象区分 |
+| 类型与空值 | 字符串、数字、布尔、数组、对象和 null 语义稳定 |
+| API 契约 | 日期/时长/大整数格式、枚举可扩展性、未知字段和兼容策略 |
+| 变更验证 | Schema、消费者兼容性、版本和错误响应均有证据 |
+
+JSON 不能用注释承载契约；需要说明时更新 Schema、接口文档或测试，不把 JSONC 当作严格 JSON。

@@ -16,3 +16,10 @@
 xmllint --noout <changed-xml-files>
 xmllint --schema <schema.xsd> --noout <changed-xml-files>
 ```
+## 严格执行清单
+
+### 官方章节覆盖
+
+必须读取 `upstream/google-styleguide/xmlstyle.html`；正文的命名、枚举值、元素/属性、命名空间、Schema、缩进、注释、实体、处理指令和文件有效性都属于审查范围。HTML 页面中所有编号条款以原文为准，不能只采用本文件的摘要。
+
+XML 声明、UTF-8、大小写、2 空格、双引号、Schema 验证、外部实体和生成文件边界分别记录证据。生成 XML 必须记录生成器和版本；`xmllint` 通过不证明业务 Schema、未知字段策略或安全边界通过。

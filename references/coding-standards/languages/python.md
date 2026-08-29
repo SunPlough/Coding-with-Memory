@@ -31,3 +31,17 @@ python -m compileall <changed-python-files>
 ```
 
 工具不存在时报告 `not-found`，不要把人工阅读结果伪装成 Formatter/Lint 通过。
+## 严格执行清单
+
+### 官方章节覆盖
+
+必须逐章读取 `upstream/google-styleguide/pyguide.md`，并按 `pylintrc` 与 `google_python_style.vim` 对齐工具：
+
+| 官方章节 | 必查主题 |
+|---|---|
+| 1 Background | Python 版本、术语和适用范围 |
+| 2 Python Language Rules | lint、导入、包、异常、可变状态、推导式、默认参数、资源和生成器 |
+| 3 Python Style Rules | 行宽、缩进、空白、命名、注释/docstring、字符串、类、函数、类型、主入口和 TODO |
+| 4 Parting Words | 可读性、一致性和审查边界 |
+
+Pylint、Formatter、类型检查、测试分别记录；三引号 docstring、异常恢复、资源释放和公共 API 契约不能只用格式化器证明。

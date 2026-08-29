@@ -12,7 +12,7 @@ base.md
 
 严格执行时必须先读取 [严格执行协议](strict.md)。它要求读取固定版本的 Google 官方全文快照，按章节记录检查状态，不得只依据下方语言摘要判断合规。
 
-语言文件负责路由和项目化执行清单；固定版本的官方全文镜像位于 `upstream/google-styleguide/`，文件清单和哈希位于 [upstream-manifest.json](upstream-manifest.json)。每条规则必须保留来源章节、规范等级、适用范围和验证方式；需要完整背景时读取本地快照，而不是只看摘要。审查前先运行 `scripts/verify_upstream.py`。
+语言文件负责路由和项目化执行清单；固定版本的官方全文镜像位于 `upstream/google-styleguide/`，文件清单和哈希位于 [upstream-manifest.json](upstream-manifest.json)。每份语言文件都包含官方章节覆盖表、可执行规则和验证证据要求；它们不是对官方正文的替代。每条规则必须保留来源章节、规范等级、适用范围和验证方式；需要完整背景时读取本地快照，而不是只看摘要。审查前先运行 `scripts/verify_upstream.py`。
 
 只加载当前变更路径适用的文件。修改源码时必须加载 [注释规范](comments/index.md)。Google Style Guides 是默认语言来源；注释层补充跨语言语义和中文写作要求，不替代语言工具的格式规则。
 

@@ -25,3 +25,21 @@ npx --no-install eslint <changed-files>
 npx --no-install tsc --noEmit
 npm test
 ```
+## 严格执行清单
+
+### 官方章节覆盖
+
+必须读取 `upstream/google-styleguide/tsguide.html` 的全部章节：
+
+| 官方章节 | 必查主题 |
+|---|---|
+| Introduction | 术语、TypeScript 与 JavaScript 关系 |
+| Source file basics / structure | UTF-8、模块、导入导出、循环依赖、文件组织和可见性 |
+| Language features | 控制流、类、函数、异步、Promise、装饰器、动态代码和错误 |
+| Naming | 文件、标识符、属性、类型、泛型、常量、缩写 |
+| Type system | nullability、类型推断、联合/交叉、`any`、断言、重载和类型边界 |
+| Toolchain requirements | tsc、格式化、lint、安全规则和配置不能互相替代 |
+| Comments and documentation | JSDoc/TSDoc、公共导出、弃用、装饰器前文档和实现原因 |
+| Policies | 禁止项、兼容性、生成代码和例外 |
+
+每条 TypeScript 规则必须保留官方章节和工具/人工证据；`tsc --noEmit` 不能证明命名、文档、模块循环和运行时验证通过。

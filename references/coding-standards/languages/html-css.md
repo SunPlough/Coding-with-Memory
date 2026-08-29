@@ -22,3 +22,16 @@ npx --no-install stylelint <changed-css-files>
 npx --no-install html-validate <changed-html-files>
 npm test
 ```
+## 严格执行清单
+
+### 官方章节覆盖
+
+来源为 `upstream/google-styleguide/htmlcssguide.html`，按以下章节逐项审查：
+
+| 官方章节 | 必查主题 |
+|---|---|
+| General | HTTPS 协议、UTF-8、缩进、大小写、尾随空白、注释和 action item |
+| HTML | doctype、有效性、语义、媒体 fallback、关注点分离、实体引用、可选标签、type 和 id 属性、换行与引号 |
+| CSS | 有效性、类/id 命名、前缀、type/id 选择器、缩写属性、零值单位、前导零、十六进制、`!important`、hack、声明顺序和注释 |
+
+HTML/CSS 格式化器只能证明排版；语义、资源协议、可访问性、内容溢出和浏览器行为必须通过校验器、可访问性扫描和真实浏览器测试分别记录。

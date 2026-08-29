@@ -20,3 +20,17 @@
 clang-format --dry-run --Werror <changed-c-files-and-headers>
 cc -std=<project-standard> -Wall -Wextra -Werror -fsyntax-only <changed-files>
 ```
+## 严格执行清单
+
+- `source_status`: `no-google-guide`。Google `styleguide` 主仓库没有独立 C 语言指南；快照中的 `google-c-style.el` 只是编辑器配置，不能冒充规范正文。
+- C 代码必须先声明 C 标准、ABI、编译器和告警基线；这些项目事实高于本文件的 MAY 选择。
+- C 头文件必须先通过 [C 或 C++ 头文件判定](c-or-cpp-header.md)，未经判定不得套用 C++ 的类、异常、RTTI 或智能指针规则。
+
+| 检查层 | 必须证明的内容 | 推荐证据 |
+|---|---|---|
+| 语言版本 | C11/C17 等版本与扩展 | 构建文件、编译命令 |
+| 接口契约 | 所有权、容量、生命周期、错误码、线程安全 | 头文件文档、测试 |
+| 内存与边界 | 分配、I/O、字符串和整数边界均处理失败 | 静态分析、Sanitizer、负例测试 |
+| 工具 | 格式、告警和测试实际执行 | 命令退出码 |
+
+没有专门 Google C Guide 的条款必须标记 `external-source` 或 `no-google-guide`，不能写成“Google 要求”。
