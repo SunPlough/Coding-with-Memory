@@ -1,0 +1,6 @@
+* text=auto
+
+# 上游文件按原始字节校验，禁止平台换行转换。
+references/coding-standards/upstream/** -text
+references/coding-standards/upstream-manifest.json text eol=lf
+scripts/*.py text eol=lf
