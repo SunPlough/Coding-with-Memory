@@ -1,0 +1,7 @@
+Google Style Guide material in `upstream/google-styleguide/` is reproduced from:
+https://github.com/google/styleguide/tree/1809c769de31ba388c755ad15dd057a9ba8531fd
+
+The upstream material is licensed under the Creative Commons Attribution 3.0
+Unported License (CC BY 3.0). This notice does not change the MIT license of
+the Coding with Memory code and original instructions. Coding with Memory is
+not affiliated with or endorsed by Google.

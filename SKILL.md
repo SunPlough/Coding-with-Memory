@@ -37,14 +37,22 @@ python <skill-dir>/scripts/collect_context.py --repo <repo> --format markdown
 
 然后按路径加载：
 
-1. [规范索引](references/coding-standards/index.md) 与 [通用工程基线](references/coding-standards/base.md)。
-2. `references/coding-standards/languages/` 中当前文件对应的语言规范；逐项执行其中 MUST/MUST NOT，SHOULD 例外必须有证据。
+1. [规范索引](references/coding-standards/index.md)、[严格执行协议](references/coding-standards/strict.md) 与 [通用工程基线](references/coding-standards/base.md)。
+2. `references/coding-standards/languages/` 中当前文件对应的语言规范；再读取 `references/coding-standards/upstream/google-styleguide/` 中固定版本的官方全文。不得只依据摘要执行；逐章节记录 MUST/MUST NOT/SHOULD/MAY/AVOID 的状态，SHOULD 例外必须有证据。
 3. [中文注释规范](references/coding-standards/comments/index.md)，修改源码时必读。
-4. 仓库实际使用的框架规范；没有对应文件时遵循官方文档与仓库事实，不自行发明规则。
+4. 仓库实际使用的框架规范；没有对应文件时遵循官方文档与仓库事实，不自行发明规则。Google 主仓库没有覆盖的语言必须标记 `external-source` 或 `no-google-guide`。
 5. [架构边界](references/architecture/boundaries.md)、[安全清单](references/security/checklist.md) 和项目覆盖规则。
 6. 从项目 `.coding-memory/` 中只检索与任务相关且已批准的 Memory。
 
-不要一次加载所有语言或无关框架文件。
+不要一次加载所有语言或无关框架文件；但对当前语言不能跳过官方全文快照。全文较长时按 `strict.md` 的章节映射分段检索并保留证据。
+
+加载规范前先校验固定快照：
+
+```bash
+python <skill-dir>/scripts/verify_upstream.py --skill <skill-dir>
+```
+
+校验失败时不得声称已按 Google 固定版本执行；交付报告中记录 `failed` 及具体文件。
 
 ## 2. 给任务分级
 

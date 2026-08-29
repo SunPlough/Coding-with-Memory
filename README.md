@@ -96,6 +96,14 @@ flowchart LR
 
 注释只解释代码本身无法稳定表达的契约、约束、边界和设计原因。禁止逐行翻译代码、注释掉旧代码、虚构 Issue 或把用户偏好当成仓库规范。
 
+严格模式会先校验 `references/coding-standards/upstream-manifest.json`，再加载当前语言对应的 Google 官方正文快照。快照固定在 `google/styleguide` 的提交 `1809c769de31ba388c755ad15dd057a9ba8531fd`，共 43 个正文/工具配置文件；可用以下命令复核：
+
+```bash
+python scripts/verify_upstream.py --skill .
+```
+
+Rust、Dart、Swift、Kotlin 等不属于该主仓库的语言会明确标记为 `external-source`，不能冒充 Google 主仓库规范。
+
 ## Memory 设计
 
 运行时 Memory 写入目标项目的 `.coding-memory/`，不会写入 Skill 安装目录。

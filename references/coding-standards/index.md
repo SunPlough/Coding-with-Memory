@@ -10,7 +10,9 @@ base.md
   + project-template.md 对应的仓库覆盖规则
 ```
 
-语言文件不是上游网页的全文镜像，而是从固定 Google/官方版本提炼出的可执行规则。每条规则尽量保留 MUST/SHOULD/MAY/AVOID 等规范等级、适用范围和验证方式；需要完整背景时跟随来源链接阅读上游。
+严格执行时必须先读取 [严格执行协议](strict.md)。它要求读取固定版本的 Google 官方全文快照，按章节记录检查状态，不得只依据下方语言摘要判断合规。
+
+语言文件负责路由和项目化执行清单；固定版本的官方全文镜像位于 `upstream/google-styleguide/`，文件清单和哈希位于 [upstream-manifest.json](upstream-manifest.json)。每条规则必须保留来源章节、规范等级、适用范围和验证方式；需要完整背景时读取本地快照，而不是只看摘要。审查前先运行 `scripts/verify_upstream.py`。
 
 只加载当前变更路径适用的文件。修改源码时必须加载 [注释规范](comments/index.md)。Google Style Guides 是默认语言来源；注释层补充跨语言语义和中文写作要求，不替代语言工具的格式规则。
 
@@ -37,7 +39,7 @@ base.md
 |---|---|---|
 | `cpp.md` | C++ | 可用 |
 | `csharp.md` | C# | 可用 |
-| `dart.md` | Effective Dart | Google 索引委托来源 |
+| `dart.md` | Effective Dart | `external-source`，不是主仓库快照 |
 | `go.md` | Go | 可用 |
 | `html-css.md` | HTML/CSS | 可用 |
 | `java.md` | Java | 可用 |
@@ -48,13 +50,13 @@ base.md
 | `objective-c.md` | Objective-C | 可用 |
 | `python.md` | Python | 可用 |
 | `r.md` | R | 可用 |
-| `rust.md` | Rust | 可用 |
+| `rust.md` | Google Rust Style Guide | `external-source`，不是主仓库快照 |
 | `shell.md` | Shell | 可用 |
 | `typescript.md` | TypeScript | 可用 |
 | `vimscript.md` | Vimscript | 可用 |
 | `xml.md` | XML | 可用 |
-| `swift.md` | Google Swift Guide | 独立 Google 仓库 |
-| `kotlin.md` | Android Kotlin Style Guide | 独立 Android 来源 |
+| `swift.md` | Google Swift Guide | `external-source`，独立 Google 仓库 |
+| `kotlin.md` | Android Kotlin Style Guide | `external-source`，独立 Android 来源 |
 | `c.md` | 无专门 Google C Guide | 必须由项目规则补充 |
 
 固定上游版本、官方 URL 和许可说明见 [来源](sources.md)。

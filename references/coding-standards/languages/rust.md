@@ -1,6 +1,6 @@
 # Rust
 
-来源：<https://google.github.io/styleguide/rust/>（Google Rust Style Guide；若上游内容不可用，遵循仓库 rustfmt/Clippy 配置）
+来源：<https://google.github.io/styleguide/rust/>（独立 Google Rust Style Guide，`external-source`，不属于 `google/styleguide` 主仓库快照；若上游内容不可用，遵循仓库 rustfmt/Clippy 配置）
 
 ## 规则
 

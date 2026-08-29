@@ -1,0 +1,328 @@
+{
+  "schema_version": 1,
+  "upstream": {
+    "repository": "google/styleguide",
+    "ref": "gh-pages",
+    "commit": "1809c769de31ba388c755ad15dd057a9ba8531fd",
+    "commit_url": "https://github.com/google/styleguide/commit/1809c769de31ba388c755ad15dd057a9ba8531fd",
+    "license": "CC BY 3.0 Unported",
+    "license_path": "upstream/google-styleguide/LICENSE",
+    "snapshot_root": "upstream/google-styleguide",
+    "scope": "guide-text-and-prescriptive-config",
+    "excluded": [
+      ".github/",
+      "CODE_OF_CONDUCT.md",
+      "assets/",
+      "include/",
+      "*.png",
+      "*.ico",
+      "*.css (except javaguide.css)",
+      "*.js",
+      "*.xsl",
+      "shell.xsl"
+    ]
+  },
+  "files": [
+    {
+      "path": "LICENSE",
+      "local_path": "upstream/google-styleguide/LICENSE",
+      "blob_sha": "1a16e05564d2aaa880bbe9e506a0a0226d8742cc",
+      "size": 19467,
+      "sha256": "e6bc9e9c474700b708f568bac9e5a8a9bcb2b1dad53442f5ba449fcb848b8e76"
+    },
+    {
+      "path": "README.md",
+      "local_path": "upstream/google-styleguide/README.md",
+      "blob_sha": "44fe4e4f76c5af7fa60797a0a68e5850a5e5345b",
+      "size": 4818,
+      "sha256": "5ba63d376861542be959b6ef67d46c73142c261f5a95b5534cf55926bf091054"
+    },
+    {
+      "path": "Rguide.md",
+      "local_path": "upstream/google-styleguide/Rguide.md",
+      "blob_sha": "de27371a0a8dec4a5f8852eb212bf7820a07966b",
+      "size": 2982,
+      "sha256": "0e98a59bbf35a1c415569aa8f01b0a809e10f7c988f15fcf87c5d48c0e575479"
+    },
+    {
+      "path": "Rguide.xml",
+      "local_path": "upstream/google-styleguide/Rguide.xml",
+      "blob_sha": "ae6a93d1e681c3c424595dc70951140a0d51302c",
+      "size": 482,
+      "sha256": "ce45afb390182f00b3fbad66070acaf1e5b68e9036275be2d17fbf5cedff5d82"
+    },
+    {
+      "path": "angularjs-google-style.html",
+      "local_path": "upstream/google-styleguide/angularjs-google-style.html",
+      "blob_sha": "6ca190b4986605c7816e45b6ce4638600ce56c0e",
+      "size": 12751,
+      "sha256": "c31844ea144a261f583dbcbd04429b7b523d360f0b7f1a587583fce6253dbf1d"
+    },
+    {
+      "path": "cppguide.html",
+      "local_path": "upstream/google-styleguide/cppguide.html",
+      "blob_sha": "9e849cc2f0cb13c3a4a9d9be428b4c9cf1a42c0b",
+      "size": 242543,
+      "sha256": "f681e8c1b71ed5f2420555a28b7e7120f46914cfa126e9d8ec5e6e9851512caf"
+    },
+    {
+      "path": "cppguide.xml",
+      "local_path": "upstream/google-styleguide/cppguide.xml",
+      "blob_sha": "152ac877194eb742b0da1c193ba683da8e49e132",
+      "size": 711,
+      "sha256": "5d08a597b2a0f5be2501d122074a2250a5abc3938d0c1e1625355f3be6fba6cb"
+    },
+    {
+      "path": "csharp-style.md",
+      "local_path": "upstream/google-styleguide/csharp-style.md",
+      "blob_sha": "bae61c56b1797cf6cc52ea5f4019dc187fda61cb",
+      "size": 20114,
+      "sha256": "1a3e393d03a19a3cc480b35b250d97535f808974ad8ccd9a495d4fc750207e3c"
+    },
+    {
+      "path": "docguide/README.md",
+      "local_path": "upstream/google-styleguide/docguide/README.md",
+      "blob_sha": "39fe2eccab23a140112fa729d4974eb97ce5a991",
+      "size": 254,
+      "sha256": "80003ff6a719b4388728857238becbb29a4b22db12feaf1c368c7d71c4334ba2"
+    },
+    {
+      "path": "docguide/READMEs.md",
+      "local_path": "upstream/google-styleguide/docguide/READMEs.md",
+      "blob_sha": "a024961cdf4fe4ceebf67a3003bdae8f452229c0",
+      "size": 2074,
+      "sha256": "5de33ff445b3897b39106f2d7f689f79142a12cf7fab1e191900be27d1b178b1"
+    },
+    {
+      "path": "docguide/VERSION",
+      "local_path": "upstream/google-styleguide/docguide/VERSION",
+      "blob_sha": "cd5ac039d67e0bdadb17976e4ac39f0ffe6bb6e4",
+      "size": 4,
+      "sha256": "d526eb4e878a23ef26ae190031b4efd2d58ed66789ac049ea3dbaf74c9df7402"
+    },
+    {
+      "path": "docguide/best_practices.md",
+      "local_path": "upstream/google-styleguide/docguide/best_practices.md",
+      "blob_sha": "946c2555ec54133728d3f1eba30fe731c7b32017",
+      "size": 6411,
+      "sha256": "6f9843dc227b934807b2bd231ad9682512c522d83e8646b317f216e1a22b1e62"
+    },
+    {
+      "path": "docguide/philosophy.md",
+      "local_path": "upstream/google-styleguide/docguide/philosophy.md",
+      "blob_sha": "690c3e4900aa782750247e8b14d5eb3cb4c6b47c",
+      "size": 2922,
+      "sha256": "5715b9bd8a442c01f2ed2c064e50f847d9749e68208442745b250950b5bcd86b"
+    },
+    {
+      "path": "docguide/style.md",
+      "local_path": "upstream/google-styleguide/docguide/style.md",
+      "blob_sha": "34b98ad4af2d36059d064dbe28f7170dc1a69b50",
+      "size": 25897,
+      "sha256": "cf6ef17b4a4c72420a61621a196e964800e166c9a13304c8ab989e7604b2ee95"
+    },
+    {
+      "path": "eclipse-cpp-google-style.xml",
+      "local_path": "upstream/google-styleguide/eclipse-cpp-google-style.xml",
+      "blob_sha": "aa05a819abc19d6a33fa0cb86aef606c54b238c1",
+      "size": 17612,
+      "sha256": "a59733da609ca75c5f4a830718c1ceac74564df9c9d4041668606bb565470fd1"
+    },
+    {
+      "path": "eclipse-java-google-style.xml",
+      "local_path": "upstream/google-styleguide/eclipse-java-google-style.xml",
+      "blob_sha": "7bb6804eb39f988b43f6ac997d66c203272d4969",
+      "size": 36003,
+      "sha256": "e75524bb67e3ffc88d5c680ed75254e072e3dbccbb91c4a0c708dcfabf2bdf91"
+    },
+    {
+      "path": "go/best-practices.md",
+      "local_path": "upstream/google-styleguide/go/best-practices.md",
+      "blob_sha": "bb70a09c9138ec8ce6e54606353311c714be9046",
+      "size": 138723,
+      "sha256": "e44180b492c3585b4a20bd44e7cb277a55a9f264ad352f33f287b639e9e75b56"
+    },
+    {
+      "path": "go/decisions.md",
+      "local_path": "upstream/google-styleguide/go/decisions.md",
+      "blob_sha": "831d83b8eed2e6f81b79478305be7847c2dfd9a0",
+      "size": 126130,
+      "sha256": "3a0b54ef41aca49f8bf0a4d4ce2d0b4662721b52197256d121b6cc95616f4850"
+    },
+    {
+      "path": "go/guide.md",
+      "local_path": "upstream/google-styleguide/go/guide.md",
+      "blob_sha": "46557bfb253c96330c064071523e8d951d2f89af",
+      "size": 19740,
+      "sha256": "f12051c22045953c3688a85f9eba94f7cf61b6a769762671cdbf1ca4d2b3aa1b"
+    },
+    {
+      "path": "go/index.md",
+      "local_path": "upstream/google-styleguide/go/index.md",
+      "blob_sha": "e760a4556e86e40301fdea17a2a6b078bdd77c93",
+      "size": 8565,
+      "sha256": "95f228a13481ffefab9da3303446484e2b22c6cffa34a273169c844ad33a3435"
+    },
+    {
+      "path": "google-c-style.el",
+      "local_path": "upstream/google-styleguide/google-c-style.el",
+      "blob_sha": "06a44e97565a6fa7ef6c52a798d457d3247ffd63",
+      "size": 6199,
+      "sha256": "6cb937f2908b0f4909f8aea4b7f5387cdc5f6b7e0ee9f601bea97e639c36f504"
+    },
+    {
+      "path": "google-r-style.html",
+      "local_path": "upstream/google-styleguide/google-r-style.html",
+      "blob_sha": "6c945d191b2f66ed7205e62518f1c19057811169",
+      "size": 673,
+      "sha256": "5eb9a99defaa3285c0d60c16ada3c037a5c89fdf102c5e0b1734afefb45c2217"
+    },
+    {
+      "path": "google_python_style.vim",
+      "local_path": "upstream/google-styleguide/google_python_style.vim",
+      "blob_sha": "95f61d8575be5e47b716ff5223670a416b272c23",
+      "size": 1607,
+      "sha256": "4d5e9aecf164aaf1c8425c858112eae76ff38e1d2fc7a631ea84db635b0ed0d8"
+    },
+    {
+      "path": "htmlcssguide.html",
+      "local_path": "upstream/google-styleguide/htmlcssguide.html",
+      "blob_sha": "f23825df2db6e6748032782ca746eb3a4d3cf32b",
+      "size": 32139,
+      "sha256": "b4400d7cb3628c63664c17fdf1c5185b5ac707c4a56bb0348cf3f59b030c04d3"
+    },
+    {
+      "path": "htmlcssguide.xml",
+      "local_path": "upstream/google-styleguide/htmlcssguide.xml",
+      "blob_sha": "0ab9f800c2e5ecabbf8610a781447638fba4c9e7",
+      "size": 232,
+      "sha256": "d7b631325acbbc2ac14cc1ef28b83ec407e3ef61f878b181ec77c406bb477be1"
+    },
+    {
+      "path": "intellij-java-google-style.xml",
+      "local_path": "upstream/google-styleguide/intellij-java-google-style.xml",
+      "blob_sha": "f3a6743efa62d937d4d7b0afbd20d997ba2c9034",
+      "size": 22144,
+      "sha256": "1f3578c03470362b9ad7c11cf9748308d3d362bcacbff4e04edd3b216565383f"
+    },
+    {
+      "path": "javaguide.css",
+      "local_path": "upstream/google-styleguide/javaguide.css",
+      "blob_sha": "19f2fa3c7f54c9e67a59335eff24436ffeebac32",
+      "size": 6755,
+      "sha256": "1bc6f7a52919dc308422966e293fc46acc94fc4da4c71bfc8cd2d4427dd02256"
+    },
+    {
+      "path": "javaguide.html",
+      "local_path": "upstream/google-styleguide/javaguide.html",
+      "blob_sha": "a3f23a425b4957b8f5121f8cfb50ee6ce31d5966",
+      "size": 59078,
+      "sha256": "9cc671f4c74d8bb4ea4c93861f4ec0e88d0f21267c73abe46817c14bdeb6d6b2"
+    },
+    {
+      "path": "javascriptguide.xml",
+      "local_path": "upstream/google-styleguide/javascriptguide.xml",
+      "blob_sha": "1106a837bcd62488873981a7cc8ed8a91b554e33",
+      "size": 134620,
+      "sha256": "fcdac6e284ffec8186a08af83886eac9e5a8142035481d0183072cfd8807bfa2"
+    },
+    {
+      "path": "jsguide.html",
+      "local_path": "upstream/google-styleguide/jsguide.html",
+      "blob_sha": "6eb579c582a386bd25649ba4e594b2026d333e2c",
+      "size": 150696,
+      "sha256": "302729a2a2ca6ff67056c916d6733a1b10194c61390113256612d2f320a04997"
+    },
+    {
+      "path": "jsoncstyleguide.html",
+      "local_path": "upstream/google-styleguide/jsoncstyleguide.html",
+      "blob_sha": "1bef466bff9b0dc8706c718223204a8e04a626e1",
+      "size": 745,
+      "sha256": "d626f6a7726e8bb56181d2961b26f514dc562c5b0cc3853e688c0cfc7f567a98"
+    },
+    {
+      "path": "jsoncstyleguide.xml",
+      "local_path": "upstream/google-styleguide/jsoncstyleguide.xml",
+      "blob_sha": "010c585bbdd872766d848bc3fee28ee4c185238d",
+      "size": 45627,
+      "sha256": "f0288ebb8d9adba399b2135ad9f9c04cdea8471ef3ea61836b1ed12fb2979d61"
+    },
+    {
+      "path": "lispguide.xml",
+      "local_path": "upstream/google-styleguide/lispguide.xml",
+      "blob_sha": "d4f384138df6eb0017666ec329b14585af225cab",
+      "size": 156015,
+      "sha256": "76a614ac7b6ee4b9e6108c7164cde7b6fcc1025d04c9132312fe9b12a78824d8"
+    },
+    {
+      "path": "objcguide.md",
+      "local_path": "upstream/google-styleguide/objcguide.md",
+      "blob_sha": "905f1367c63bf86a316d2a3bb8269786077d6e62",
+      "size": 72787,
+      "sha256": "d523daa8026f3b1636ec64017adcab3df3027db7655360eec012be22eb4be495"
+    },
+    {
+      "path": "objcguide.xml",
+      "local_path": "upstream/google-styleguide/objcguide.xml",
+      "blob_sha": "3beca74b4cbc11dc96d1ccfe44d866cc664dd407",
+      "size": 276,
+      "sha256": "f6cd90dc2bb0338b684966c8604f1560a05a20c40df751f929c24673321fc8d3"
+    },
+    {
+      "path": "pyguide.md",
+      "local_path": "upstream/google-styleguide/pyguide.md",
+      "blob_sha": "69e202ee21e10fb88674f4467a147f5bcb65f4d1",
+      "size": 115828,
+      "sha256": "0bd17ead9e6d60b45502399ef4341a1b1b8de4595c0b58e9c272eb73f4827ef4"
+    },
+    {
+      "path": "pylintrc",
+      "local_path": "upstream/google-styleguide/pylintrc",
+      "blob_sha": "70c1cc161ad75f393ee70d29a3cc54a4684289f5",
+      "size": 13570,
+      "sha256": "6e7c72c556651e961fa3e393c231970acdeb73d9894c9587c5e0bc4a8c46b643"
+    },
+    {
+      "path": "shell.xml",
+      "local_path": "upstream/google-styleguide/shell.xml",
+      "blob_sha": "6fe448dfebcad9215f8d1014dee65251ad8dd001",
+      "size": 232,
+      "sha256": "ca80e69b1fb5d8aeabb2649bcc296a76d1a8a536adede7ca57b701f59b9aafa3"
+    },
+    {
+      "path": "shellguide.md",
+      "local_path": "upstream/google-styleguide/shellguide.md",
+      "blob_sha": "86f692043c4fc4e7e8f94e5ccf559de84e807348",
+      "size": 40209,
+      "sha256": "af0e99572b65d9c64da0035a7d9fbc3c32d81dc7289ca41340d1078726a464bf"
+    },
+    {
+      "path": "tsguide.html",
+      "local_path": "upstream/google-styleguide/tsguide.html",
+      "blob_sha": "d96372f0328ea501fb09b8642948e893935ae8c1",
+      "size": 141132,
+      "sha256": "f175e2dbbea31bc40a73e757bbea11f53ad1580bd5d6aa4d10288fa6505832bb"
+    },
+    {
+      "path": "vimscriptfull.xml",
+      "local_path": "upstream/google-styleguide/vimscriptfull.xml",
+      "blob_sha": "a31abd9582d0718d9363266656bd26ab9477c90e",
+      "size": 50305,
+      "sha256": "f41693255ef945caa4c2c0afdcf25ea6e93b4b1d876855ea4f517ee0a9423b0c"
+    },
+    {
+      "path": "vimscriptguide.xml",
+      "local_path": "upstream/google-styleguide/vimscriptguide.xml",
+      "blob_sha": "50317976d6f0851ead10e059518698f38eb5e6d7",
+      "size": 14234,
+      "sha256": "15525778ab5f4031cdc811e3fb68d7696cd9cf0a2048cac894cca7c6dd4101d5"
+    },
+    {
+      "path": "xmlstyle.html",
+      "local_path": "upstream/google-styleguide/xmlstyle.html",
+      "blob_sha": "e5977a68296b81aa22915867f4df900415382f04",
+      "size": 35220,
+      "sha256": "49e0636b86d8804c5b34b2d134fd11440ee2864646435e887c092351d149830f"
+    }
+  ]
+}
